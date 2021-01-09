@@ -2,11 +2,11 @@ module.exports = {
   "refs": {
     '@cstorybook/atoms': {
        title: "Atoms",
-       url: "https://github.com/priyankag048/check-storybook/blob/main/docs/storybook/atoms"
+       url: "https://priyankag048.github.io/storybook-composition/story-atoms"
     },
     '@cstorybook/molecules': {
       title: "Molecules",
-      url: "https://github.com/priyankag048/check-storybook/blob/main/docs/storybook/molecules"
+      url: "https://priyankag048.github.io/storybook-composition/story-molecules"
    }
   },
   "addons": [

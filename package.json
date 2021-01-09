@@ -22,9 +22,10 @@
   "scripts": {
     "generate-atoms-stories": "npx sb extract build/storybook/atoms",
     "generate-molecules-stories": "npx sb extract build/storybook/molecules",
-    "build-stories": "build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-stories": "build-storybook -o build/storybook/main",
+    "generate-stories": "npx sb extract build/storybook/main",
+    "deploy-storybook": "gh-pages -d build/storybook/main --dest docs/story-main",
     "deploy-storybook-atoms": "gh-pages -d build/storybook/atoms --dest docs/story-atoms",
-    "deploy-storybook-molecules": "gh-pages -d build/storybook/molecules"
+    "deploy-storybook-molecules": "gh-pages -d build/storybook/molecules --dest docs/story-molecules"
   }
 }
