@@ -15,14 +15,16 @@
     "@storybook/react": "^6.1.11",
     "babel-loader": "^8.2.2",
     "core-js": "^3.8.2",
+    "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "scripts": {
-    "generate-atoms-stories": "npx sb extract build/storybook/atoms docs/storybook/atoms/stories.json",
-    "generate-molecules-stories": "npx sb extract build/storybook/molecules docs/storybook/molecules/stories.json",
+    "generate-atoms-stories": "npx sb extract build/storybook/atoms",
+    "generate-molecules-stories": "npx sb extract build/storybook/molecules",
     "build-stories": "build-storybook",
-    "predeploy": "yarn build-stories",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "deploy-storybook-atoms": "gh-pages -d build/storybook/atoms --dest docs/story-atoms",
+    "deploy-storybook-molecules": "gh-pages -d build/storybook/molecules"
   }
 }
