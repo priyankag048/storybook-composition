@@ -19,8 +19,8 @@
     "react-dom": "^17.0.1"
   },
   "scripts": {
-    "generate-atoms-stories": "npx sb extract build/storybook/atoms docs/storybook/atoms.json",
-    "generate-molecules-stories": "npx sb extract build/storybook/molecules docs/storybook/molecules.json",
+    "generate-atoms-stories": "npx sb extract build/storybook/atoms docs/storybook/atoms/stories.json",
+    "generate-molecules-stories": "npx sb extract build/storybook/molecules docs/storybook/molecules/stories.json",
     "build-stories": "build-storybook",
     "predeploy": "yarn build-stories",
     "deploy-storybook": "gh-pages -d storybook-static"
