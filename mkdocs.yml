@@ -1,0 +1,5 @@
+site_name: Storybook Composition
+nav:
+  - Home: index.md
+  - Storybook: docs/storybook/main/index.html
+theme: readthedocs

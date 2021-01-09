@@ -1,0 +1,26 @@
+{
+  "name": "check-storybook",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-docs": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/react": "^6.1.11",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.8.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "scripts": {
+    "generate-atoms-stories": "npx sb extract build/storybook/atoms docs/storybook/atoms.json",
+    "generate-molecules-stories": "npx sb extract build/storybook/molecules docs/storybook/molecules.json",
+    "build-stories": "build-storybook -o docs/storybook/main"
+  }
+}
