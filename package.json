@@ -21,6 +21,8 @@
   "scripts": {
     "generate-atoms-stories": "npx sb extract build/storybook/atoms docs/storybook/atoms.json",
     "generate-molecules-stories": "npx sb extract build/storybook/molecules docs/storybook/molecules.json",
-    "build-stories": "build-storybook -o docs/storybook/main"
+    "build-stories": "build-storybook",
+    "predeploy": "yarn build-stories",
+    "deploy-storybook": "gh-pages -d storybook-static"
   }
 }
