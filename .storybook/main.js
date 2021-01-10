@@ -1,12 +1,13 @@
 module.exports = {
+  "stories": ["../stories/**.stories.mdx"],
   "refs": {
     '@cstorybook/atoms': {
        title: "Atoms",
-       url: "https://priyankag048.github.io/storybook-composition/story-atoms"
+       url: "https://priyankag048.github.io/storybook-composition/stories-atoms"
     },
     '@cstorybook/molecules': {
       title: "Molecules",
-      url: "https://priyankag048.github.io/storybook-composition/story-molecules"
+      url: "https://priyankag048.github.io/storybook-composition/stories-molecules"
    }
   },
   "addons": [
