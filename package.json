@@ -20,13 +20,15 @@
     "react-dom": "^17.0.1"
   },
   "scripts": {
-    "generate-atoms-stories": "npx sb extract build/storybook/atoms",
+    "build-wrkspace-stories": "yarn workspaces foreach run build-storybook",
+    "gen-atoms-stories": "npx sb extract build/storybook/atoms",
+    "gen-molecules-stories": "npx sb extract build/storybook/molecules",
+    "gen-wrkspace-stories": "yarn gen-atoms-stories && yarn gen-molecules-stories",
     "deploy-storybook-atoms": "gh-pages -d build/storybook/atoms --dest stories-atoms",
-    "generate-molecules-stories": "npx sb extract build/storybook/molecules",
     "deploy-storybook-molecules": "gh-pages -d build/storybook/molecules --dest stories-molecules",
     "build-stories": "build-storybook -o build/storybook/main",
     "generate-stories": "npx sb extract build/storybook/main",
     "deploy-storybook": "gh-pages -d build/storybook/main --dest stories",
-    "deploy-docs": "gh-pages -d site --dest documentation"
+    "deploy-docs": "mkdocs build && gh-pages -d site"
   }
 }
