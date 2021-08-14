@@ -1,0 +1,22 @@
+{
+  "name": "@cstorybook/atoms",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-docs": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/react": "^6.1.11",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.8.2"
+  },
+  "scripts": {
+    "build-storybook": "build-storybook -o ../../build/storybook/atoms"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
