@@ -1,0 +1,34 @@
+{
+  "name": "check-storybook",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-docs": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/react": "^6.1.11",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.8.2",
+    "gh-pages": "^3.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "scripts": {
+    "build-wrkspace-stories": "yarn workspaces foreach run build-storybook",
+    "gen-atoms-stories": "npx sb extract build/storybook/atoms",
+    "gen-molecules-stories": "npx sb extract build/storybook/molecules",
+    "gen-wrkspace-stories": "yarn gen-atoms-stories && yarn gen-molecules-stories",
+    "deploy-storybook-atoms": "gh-pages -d build/storybook/atoms --dest stories-atoms",
+    "deploy-storybook-molecules": "gh-pages -d build/storybook/molecules --dest stories-molecules",
+    "build-stories": "build-storybook -o build/storybook/main",
+    "generate-stories": "npx sb extract build/storybook/main",
+    "deploy-storybook": "gh-pages -d build/storybook/main --dest stories",
+    "deploy-docs": "mkdocs build && gh-pages -d site"
+  }
+}
